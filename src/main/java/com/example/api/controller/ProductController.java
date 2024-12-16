@@ -15,6 +15,8 @@ import java.util.List;
 
 
 @RestController()
+@CrossOrigin(origins = "http://localhost:3000", methods = {RequestMethod.GET, RequestMethod.DELETE, RequestMethod.POST})
+
 public class ProductController {
 
     private final ProductRepository productRepository;
@@ -42,6 +44,7 @@ public class ProductController {
         product.setPrice(productDTO.getPrice());
         product.setDescription(productDTO.getDescription());
         product.setCategory(category);
+        System.out.println(product);
         com.example.api.model.Product productAdd = productService.createProduct(product);
         return ResponseEntity.ok().build();
     }

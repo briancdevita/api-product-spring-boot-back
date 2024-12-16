@@ -8,7 +8,10 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 
+
 @RestController
+@CrossOrigin(origins = "http://localhost:3000", methods = {RequestMethod.GET, RequestMethod.DELETE, RequestMethod.POST})
+
 public class CategoryController {
 
 

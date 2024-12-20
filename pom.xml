@@ -105,6 +105,13 @@
         </dependency>
 
 
+        <dependency>
+            <groupId>com.opencsv</groupId>
+            <artifactId>opencsv</artifactId>
+            <version>5.7.1</version>
+        </dependency>
+
+
         <!-- Springdoc OpenAPI para Swagger -->
         <dependency>
             <groupId>org.springdoc</groupId>

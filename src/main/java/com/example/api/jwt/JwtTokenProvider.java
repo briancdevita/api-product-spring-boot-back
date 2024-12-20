@@ -50,11 +50,13 @@ public class JwtTokenProvider {
 
     // Validar el token
     public boolean validateToken(String token) {
+
         try {
             Jwts.parser().setSigningKey(jwtSecret).parseClaimsJws(token);
+
             return true;
         } catch (Exception ex) {
-            System.out.println("Token inválido: " + ex.getMessage());
+
             return false;
         }
     }
